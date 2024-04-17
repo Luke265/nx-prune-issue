@@ -1,0 +1,29 @@
+{
+  "name": "issue",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/issue/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "options": {
+        "generatePackageJson": true
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "issue:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "issue:build:development"
+        },
+        "production": {
+          "buildTarget": "issue:build:production"
+        }
+      }
+    }
+  }
+}
