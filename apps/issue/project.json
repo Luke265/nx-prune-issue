@@ -6,7 +6,13 @@
   "tags": [],
   "targets": {
     "build": {
+      "executor": "@nx/webpack:webpack",
       "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/issue",
+        "main": "apps/issue/src/main.ts",
+        "webpackConfig": "apps/issue/webpack.config.js",
         "generatePackageJson": true
       }
     },
