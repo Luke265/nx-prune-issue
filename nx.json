@@ -4,10 +4,7 @@
     "packageManager": "pnpm"
   },
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -41,5 +38,6 @@
         "targetName": "test"
       }
     }
-  ]
+  ],
+  "useLegacyCache": true
 }
